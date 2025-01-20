@@ -7,8 +7,8 @@ module "tf-module-kvm-vm" {
   cloud_init_cfg_filename = "user-data.cfg"
   cloud_init_vars = {
     vm_username = "ubuntu"
-    ssh_public_key = file("~/.ssh/id_rsa.pub")
+    ssh_public_key = var.ssh_public_key
   }
-  ssh_private_key = "~/.ssh/id_rsa"
+  ssh_private_key = var.ssh_private_key
   vm_username = "ubuntu"
 }
