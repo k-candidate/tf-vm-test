@@ -16,7 +16,7 @@ module "tf-module-kvm-vm" {
   source                  = "github.com/k-candidate/tf-module-kvm-vm.git?ref=v1.4.1"
   image_source            = "https://cloud-images.ubuntu.com/releases/noble/release/ubuntu-24.04-server-cloudimg-amd64.img"
   volume_size             = 5368709120
-  network_name            = "default"
+  network_name            = "devops"
   vm_name                 = "tf-vm-test"
   use_cloud_init          = true
   cloud_init_cfg_filename = "user-data.cfg"
